@@ -14,10 +14,10 @@ for line in fhand:
         email = word_list[1]
         dic[email] = dic.get(email,0) + 1 
 
-highest = 0
+highest_value = 0
 
-for pair in dic:
-    if dic[pair] > highest:
-        highest = [dic[pair]] 
+for key, value in dic.items():
+   if value > highest_value:
+       highest_key, highest_value = key, value
 
-print(highest)
+print(highest_key, highest_value)
