@@ -1,12 +1,21 @@
 def arithmetic_arranger(problems, optional=False):
 
-    problem_dict = dict()
-  
+    
+    # Handle input
+
+    # Compute 
+
     for problem in problems: 
         ps = problem.split()
-        prolem_dict[ps] = (int(ps[0]), (ps[1], int(ps[2]))
-        
+        if ps[1] == "+":
+            addition = int(ps[0]) + int(ps[2])
+        if ps[1] == "-":
+            addition = int(ps[0]) - int(ps[2])
 
-    return problem_dict
+    # Arrange problem
+
+    return addition, subtraction
 
 print(arithmetic_arranger(["32 + 698", "3801 - 2", "45 + 43", "123 + 49"]))
+print('hello')
+
