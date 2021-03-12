@@ -1,19 +1,19 @@
 def arithmetic_arranger(problems, optional=False):
-    
-    # Handle input
-
-    # Compute 
-
-    for problem in problems: 
-        ps = problem.split()
-        if ps[1] == "+":
-            addition = int(ps[0]) + int(ps[2])
-        if ps[1] == "-":
-            addition = int(ps[0]) - int(ps[2])
-
-    # Arrange problem
-
-    return addition, subtraction
-
-print(arithmetic_arranger(["32 + 698", "3801 - 2", "45 + 43", "123 + 49"]))
-print('hello')
+     
+    if len(problems) > 5:
+        return 'Error: Too many problems.'
+    for problem in problems:
+        problem = problem.split()
+        first = problem[0]
+        op = problem [1]
+        second = problem[2]
+        if not first.isdigit() or not second.isdigit():
+            return 'Error: Numbers must only contain digits.'
+        if op == '+' or op == '-':
+            length = len(max(problem))
+            
+        else: 
+            return "Error: Operator must be '+' or '-'."
+        
+    return
+print(arithmetic_arranger(["32 + 698", "3801 - 2", "45 + 443", "123 + 449"]))
